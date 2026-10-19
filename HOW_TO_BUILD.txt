@@ -1,0 +1,111 @@
+╔══════════════════════════════════════════════════════════════════╗
+║           InstaPay Tracker — HOW TO BUILD & DISTRIBUTE           ║
+╚══════════════════════════════════════════════════════════════════╝
+
+You only need to do this ONCE. After building, you get .exe files
+that you can distribute to anyone — they need nothing installed.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHAT YOU NEED (developer only, one-time)
+─────────────────────────────────────────
+✔ A Windows PC
+✔ Internet connection (for first build only)
+✔ This zip file extracted to a folder
+
+STEP 1 — Install Node.js
+─────────────────────────────────────────
+1. Go to: https://nodejs.org
+2. Download the LTS version (left button)
+3. Install it (click Next → Next → Install)
+4. Restart your computer
+
+STEP 2 — Extract this zip
+─────────────────────────────────────────
+Extract this zip file to your Desktop or any folder.
+You should see a folder called "instapay-app" (or similar).
+
+STEP 3 — Open Command Prompt as Administrator
+─────────────────────────────────────────
+1. Press the Windows key on your keyboard
+2. Type: cmd
+3. You will see "Command Prompt" in results
+4. RIGHT-CLICK it → click "Run as administrator"
+5. Click "Yes" when prompted
+
+STEP 4 — Go to the app folder
+─────────────────────────────────────────
+In the black window that opens, type:
+  cd Desktop\instapay-app\instapay-app
+
+(Adjust the path if you extracted somewhere else)
+Press Enter.
+
+STEP 5 — Install dependencies
+─────────────────────────────────────────
+Type:
+  npm install
+
+Press Enter and wait. This takes 2–5 minutes.
+You will see a lot of text — that is normal.
+
+STEP 6 — Build the app
+─────────────────────────────────────────
+Type:
+  npm run build
+
+Press Enter and wait. This takes 3–10 minutes on first run
+because it downloads the Electron framework (~80MB).
+
+STEP 7 — Get your .exe files
+─────────────────────────────────────────
+Open the "dist" folder inside instapay-app.
+You will find TWO files:
+
+  📦 InstaPay-Tracker-Setup.exe
+     Standard installer. User double-clicks once,
+     app installs silently, desktop shortcut created.
+     Ready to use.
+
+  📦 InstaPay-Tracker-Portable.exe
+     No installation needed at all.
+     Copy to any PC, USB drive, or shared folder.
+     Double-click and it runs immediately.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHAT END USERS NEED
+─────────────────────────────────────────
+Users receive ONLY the .exe file.
+They do NOT need Node.js, npm, or anything else.
+Just the .exe — double-click and done.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COMMON ISSUES
+─────────────────────────────────────────
+❌ "Cannot create symbolic link" error
+   → You did not run CMD as Administrator. Repeat Step 3.
+
+❌ Build seems stuck / taking very long
+   → Normal on first build. It is downloading files. Wait.
+
+❌ "Windows protected your PC" warning when opening .exe
+   → Normal for unsigned apps. Click "More info" → "Run anyway"
+   → This only happens the first time on each PC.
+
+❌ App does not open on user's PC
+   → Try the Portable version instead of Setup version.
+   → Right-click .exe → Properties → check "Unblock" → OK
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FIRST LOGIN
+─────────────────────────────────────────
+Default admin password: admin123
+Change it immediately in Settings → Admin Password.
+
+Worker login: Select a worker from the dropdown.
+Admin login:  Click the "Admin" tab on the login screen.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

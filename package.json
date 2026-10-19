@@ -1,0 +1,59 @@
+{
+  "name": "instapay-tracker",
+  "version": "1.0.0",
+  "description": "InstaPay — Hire Purchase Installment Tracker",
+  "main": "main.js",
+  "author": "InstaPay",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "build-portable": "electron-builder --win portable --x64"
+  },
+  "build": {
+    "appId": "com.instapay.tracker",
+    "productName": "InstaPay Tracker",
+    "copyright": "© 2026 InstaPay",
+    "asar": true,
+    "compression": "maximum",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        { "target": "nsis",     "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "icon": "assets/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": false,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "InstaPay Tracker",
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "InstaPay-Tracker-Setup.exe"
+    },
+    "portable": {
+      "artifactName": "InstaPay-Tracker-Portable.exe"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "assets/**/*"
+    ],
+    "publish": null
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}
